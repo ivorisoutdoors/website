@@ -1,3 +1,3 @@
-# mlo.io
+# ivorisoutdoors.com
 
 My personal website built with [Hugo](https://gohugo.io/).

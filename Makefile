@@ -39,7 +39,7 @@ proof: prod ## Run html-proofer against our prod build
 	@docker run --rm \
 		-v $(PWD)/public:/public \
 		-e INPUT_DIRECTORY=public \
-		-e INPUT_SWAP_URLS='{"^https:\\/\\/mlo\\.io\\/": "/"}' \
+		-e INPUT_SWAP_URLS='{"^https:\\/\\/ivorisoutdoors\\.com\\/": "/"}' \
 		-e INPUT_CHECK_CSS='false' \
 		anishathalye/proof-html:2.2.2
 .PHONY: proof
