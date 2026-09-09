@@ -1,9 +1,13 @@
 <!doctype html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="{{ .Site.Language.Locale }}">
   <head>
     <!-- prettier-ignore -->
     <title>{{ block "title" . }}{{ with .Params.Title }}{{ . }} | {{ end }}{{ .Site.Title }}{{ end }}</title>
     {{ partial "head.html" . }}
+
+    {{ with (templates.Defer (dict "key" "global")) }}
+      {{ partial "css.html" . }}
+    {{ end }}
   </head>
   <body
     class="bg-white font-sans font-normal text-gray-700 antialiased dark:bg-gray-900 dark:text-white"
